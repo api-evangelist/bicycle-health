@@ -1,0 +1,82 @@
+generated: '2026-08-07'
+method: searched
+source: https://www.bicyclehealth.com/security
+docs:
+- https://www.bicyclehealth.com/security
+- https://www.bicyclehealth.com/legal/npp
+- https://www.bicyclehealth.com/legal/privacy
+
+summary: >-
+  Bicycle Health publishes a healthcare regulatory and certification posture, not an
+  API conformance posture. It is a clinical telehealth organization with no public
+  API, so every cross-cutting API standard below is recorded as not-applicable rather
+  than failed. What it does publish — verified on its own site — is a HIPAA Notice of
+  Privacy Practices, a LegitScript certification seal, and American Telemedicine
+  Association membership.
+
+standards:
+- id: hipaa
+  name: HIPAA Privacy Rule (45 CFR Part 164)
+  conforms: true
+  evidence: >-
+    Bicycle Health publishes a Notice of HIPAA Privacy Practices, effective
+    2020-07-09, identifying Bicycle Health Medical Group, P.A. and the members of its
+    Affiliated Covered Entity as a HIPAA covered entity.
+  url: https://www.bicyclehealth.com/legal/npp
+  http_status: 200
+  note: >-
+    HIPAA is a legal obligation of a covered entity, not a third-party certification.
+    Recorded because the notice is published, not because it was independently audited.
+
+- id: legitscript-healthcare-merchant-certification
+  name: LegitScript Healthcare Merchant Certification
+  conforms: true
+  evidence: >-
+    A LegitScript certification seal (seal id 3906623) is served in the site footer of
+    every page and links to legitscript.com.
+  url: https://static.legitscript.com/seals/3906623.png
+  http_status: 200
+
+- id: american-telemedicine-association
+  name: American Telemedicine Association membership
+  conforms: true
+  evidence: >-
+    An American Telemedicine Association member logo is published in the site footer.
+  url: https://www.bicyclehealth.com/security
+  http_status: 200
+  note: Membership in a trade association, not a conformance certification.
+
+not_applicable:
+- id: oauth2
+  reason: No public API and no published OAuth surface.
+- id: oidc
+  reason: No public API; /.well-known/openid-configuration returns 404 on every host probed.
+- id: fhir
+  reason: >-
+    No public FHIR endpoint or capability statement was found. Bicycle Health is a
+    care-delivery organization, not an EHR or health-data platform, and publishes no
+    data-exchange interface.
+- id: rfc9457
+  reason: No public API, so no error envelope to assess.
+- id: pagination
+  reason: No public API.
+- id: idempotency
+  reason: No public API.
+- id: rfc9116
+  name: security.txt
+  reason: >-
+    /.well-known/security.txt returns 404 on www.bicyclehealth.com,
+    api.bicyclehealth.com and app.bicyclehealth.com.
+
+not_found:
+- id: soc2
+  note: No SOC 2 attestation is claimed anywhere on the public site.
+- id: iso27001
+  note: No ISO 27001 certification is claimed anywhere on the public site.
+- id: hitrust
+  note: No HITRUST certification is claimed anywhere on the public site.
+- id: 42-cfr-part-2
+  note: >-
+    No dedicated 42 CFR Part 2 (substance use disorder record confidentiality) notice
+    was found separate from the HIPAA notice — a notable gap for an OUD provider, and
+    the single clearest thing this company could publish next.
