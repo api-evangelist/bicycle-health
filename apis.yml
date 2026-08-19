@@ -19,7 +19,7 @@ image: https://cdn.prod.website-files.com/61f7c8145fe6f608faa84b36/624155b236358
 url: https://raw.githubusercontent.com/api-evangelist/bicycle-health/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-08-07'
 modified: '2026-08-07'
 tags:
