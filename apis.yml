@@ -15,6 +15,17 @@ description: 'Bicycle Health is a US telehealth provider of Medication for Addic
   in 2024. It is a clinical care organization rather than a software vendor: it ships
   a patient web and mobile application backed by a private API host, but publishes
   no public developer program, API documentation, SDK or machine-readable contract.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/61f7c8145fe6f608faa84b36/624155b2363584ddcd78b1a5_opengraph.png
 url: https://raw.githubusercontent.com/api-evangelist/bicycle-health/refs/heads/main/apis.yml
 x-type: company
