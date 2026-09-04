@@ -26,6 +26,18 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://cdn.prod.website-files.com/61f7c8145fe6f608faa84b36/624155b2363584ddcd78b1a5_opengraph.png
 url: https://raw.githubusercontent.com/api-evangelist/bicycle-health/refs/heads/main/apis.yml
 x-type: company
